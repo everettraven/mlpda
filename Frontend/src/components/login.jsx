@@ -11,6 +11,7 @@ class Login extends React.Component {
     }
   }
 
+  //Handle the login by passing the information to our authorization API endpoint
   LoginSubmit = (e) => {
     e.preventDefault();
     let username = document.getElementById("email").value;

@@ -5,16 +5,19 @@ import Image from '../image_upload_doctor.jpeg';
 import axios from 'axios';
 class Imageupload extends React.Component {
 
+  //Set the current file state as undefined
   state = {
       file: undefined
   };
 
+    //When the image changes set state to contain a file
     handleImageChange = (e) => {
     this.setState({
       file: e.target.files[0]
     })
   };
 
+  //Check if the authorization cookie exists
   getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -31,6 +34,7 @@ class Imageupload extends React.Component {
     return "";
   }
 
+  //Submit the image to the prediction endpoint at our API
   handleSubmit = (e) => {
    e.preventDefault();
    let form_data = new FormData();

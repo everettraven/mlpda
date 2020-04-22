@@ -10,6 +10,7 @@ urlpatterns = [
     
 ]
 
+#Set our custom api urls
 urlpatterns += [
     url(r'^auth/', mlpda_app.views.CustomAuthView.as_view()),
     url(r'^predict/', mlpda_app.views.MyUploadView.as_view())
